@@ -32,7 +32,7 @@ function App() {
         </div>
         <div className="input-field">
           <label>Profile Image</label>
-          <input type='file' onChange={handleUrl} />
+          <input accept='image/*' type='file' onChange={handleUrl} />
         </div>
         <button onClick={handleSubmit}>Upload Record</button>
       </div>
