@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import {useState } from 'react'
 import './App.css'
 import FileBase from 'react-file-base64'
 import { toast } from 'react-toastify'

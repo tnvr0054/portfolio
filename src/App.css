@@ -12,7 +12,7 @@
 }
 
 .video-upload-form-container span{
-  color:#2554C7;
+  color:orange;
 }
 
 .video-upload-form-container p{
@@ -39,23 +39,26 @@
   outline:none;
   border:none;
   background: none;
-  border-bottom:1px solid #555;
-  padding:5px 0 6px 0;
+  border-bottom:2px solid #555;
+  padding:8px 0 6px 0;
+  font-size:1em;
 }
 .video-upload-form .input-field input[type='text']:focus{
-  border-bottom: 1px solid #2554C7;
-  color:#0062cc;
+  border-bottom: 2px solid orange;
+  color:orange;
 }
 .video-upload-form button{
   width:400px;
   outline:none;
-  padding:10px 0;
+  padding:12px 0;
   cursor: pointer;
   font-size:0.9em;
-  background-color:#0062cc;
+  background-color:orange;
   color:#fff;
-  border: 1px solid #0062cc;
+  border: 1px solid orange;
   border-radius:4px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .video-upload-form button:active{
   transform: scale(0.98);
@@ -86,7 +89,7 @@
   display: flex;
   align-items: center;
   padding: 16px;
-  background-color: #0062cc;
+  background-color: orange;
   color: #fff;
 }
 
@@ -166,5 +169,19 @@
   }
   .video-upload-form button{
     width:350px;
+  }
+}
+@media (max-width:390px){
+  .video-upload-form-container .form-container{
+    width:300px;
+  }
+  .video-upload-form .input-field input[type='text']{
+    width:300px;
+  }
+  .video-upload-form button{
+    width:300px;
+  }
+  .video-preview-container .video-card{
+    width:300px;
   }
 }
