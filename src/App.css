@@ -159,12 +159,12 @@
 
 @media (max-width:460px){
   .video-upload-form-container .form-container{
-    width:320px;
+    width:350px;
   }
   .video-upload-form .input-field input[type='text']{
-    width:320px;
+    width:350px;
   }
   .video-upload-form button{
-    width:320px;
+    width:350px;
   }
 }

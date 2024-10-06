@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
 import FileBase from 'react-file-base64'
 import { toast } from 'react-toastify'
@@ -12,6 +12,7 @@ function App() {
     channelLogo: "",
     videoUrl: ""
   })
+
 
   const inputHandler = (e) => {
     const name = e.target.name
@@ -33,8 +34,6 @@ function App() {
       } else {
         toast.warn("Please select small video file")
       }
-
-      console.log(fileSize)
     } else {
       toast.warn('Please select a valid video file.')
     }
@@ -52,8 +51,18 @@ function App() {
   }
 
   const handleSubmit = () => {
-    setData([...data, video])
-    toast.success("Awww! video uploaded successfully!")
+    if(video.videoTitle && video.channelName && video.channelLogo && video.videoUrl){
+     setData([...data, video])
+     toast.success("Awww! video uploaded successfully!")
+     setVideo({
+      videoTitle:"",
+      channelName:"",
+      videoUrl:"",
+      channelLogo:""
+     })
+    }else{
+      toast.warn("Please fill all the fields.")
+    }
   }
 
   return (
